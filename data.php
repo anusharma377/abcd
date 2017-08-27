@@ -17,15 +17,15 @@ $db_selected = mysqli_select_db($conn, $dbname);
 if (!$db_selected) {
 	die('Can\'t use ' . $dbname  . ': ' . mysqli_error());
 }
-$First_Name = $_POST['First Name'];
-$Last_Name = $_POST['Last Name'];
+$First_Name = $_POST['FirstName'];
+$Last_Name = $_POST['LastName'];
 $Gender = $_POST['Gender'];
-$contact_no = $_POST['Contact no'];
-$Email_ID = $_POST['Email ID'];
+$contact_no = $_POST['Contactno'];
+$Email_ID = $_POST['EmailID'];
 $Address = $_POST['Address'];
 $Location = $_POST['Location'];
 // insert values
-$sql = "INSERT INTO data_1 (First Name,last Name, Gender, Contact no,  Email ID, Address, Location)  VALUES ('$First_Name', '$Last_Name', '$Gender', '$contact_no', '$Email_ID', '$Address', '$Location')";
+$sql = "INSERT INTO data_1 (FirstName,lastName, Gender, Contactno,  EmailID, Address, Location)  VALUES ('$First_Name', '$Last_Name', '$Gender', '$contact_no', '$Email_ID', '$Address', '$Location')";
 if (!mysqli_query($conn, $sql)) {
 	die('Error: ' . mysqli_error($conn));
 }
